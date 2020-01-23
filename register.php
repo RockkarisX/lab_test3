@@ -39,11 +39,16 @@
 </body>
 </html>
 <?php
+    $con = "localhost","root","","lab_test3";
     if(isset(POST['Submit']))
     {
         $username = $_POST['username'];
         $email = $_POST['email'];
         $password = $_POST['password'];
+        $password = md5($password);
         $sql1 = "INSERT into userrow (username,email,password) VALUES ('$username','$email','$password')";
+
+        mysqli_query($con,$sql1);
+
     }
 ?>
