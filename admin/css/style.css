@@ -34,17 +34,15 @@
 }
 .container
 {
-    position:absolute;
-    top:10px;
-    width:400px;
+    position:relative;
+    top:150px;
+    width:850px;
     border:5px solid #111;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    margin-left:auto;
+     -moz-border-radius: 5px;
+     border-radius: 5px;
+     margin-left:auto;
     margin-right: auto;
-    margin-bottom:auto;
-    margin-top: auto;
-    background-color: #301934;
+    background-color: black;
     overflow: hidden;
     color: cornsilk;
 }
@@ -65,5 +63,5 @@
 }
 #bod
 {
-    background-color: rgb(145, 127, 130);
+    background-color: crimson;
 }

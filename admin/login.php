@@ -1,3 +1,7 @@
+<?php 
+    include ('server.php');
+
+?>
 <html>
 <title>RockGames register page</title>
 <link rel="stylesheet" href="css/bootsrap.min.css">
@@ -17,38 +21,18 @@
 
                                 <input type="text" class="form-control" placeholder="username *" name="username"/>
                             </div>
-                            <div class="form-group">
-                           
-                                <input type="email" class="form-control" placeholder="email *" name="email"/>
-                            </div>
+                        
                             <div class="form-group">
                             
                                 <input type="password" class="form-control" placeholder="Your Password *" name="password"/>
                             </div>
-                            <div class="form-group">
-                              
-                                <input type="password" class="form-control" placeholder="Confirm Password *" name="confirm"/>
-                            </div>
+                           
                         </div>
                     </div>
-                    <button type="button" class="btnSubmit">Submit</button>
-                    <h6 style = "color:white;">Already have an account? <a href = "login.php">Login</a></h6>
+                    <button type="button" class="btnSubmit">Login</button>
+                    <h6 style = "color:white;">Don't have an account? <a href = "register.php">Register</a></h6>
                 </div>
             </div>
         </div>
 </body>
 </html>
-<?php
-    $con = "localhost","root","","lab_test3";
-    if(isset(POST['Submit']))
-    {
-        $username = $_POST['username'];
-        $email = $_POST['email'];
-        $password = $_POST['password'];
-        $password = md5($password);
-        $sql1 = "INSERT into userrow (username,email,password) VALUES ('$username','$email','$password')";
-
-        mysqli_query($con,$sql1);
-
-    }
-?>
